@@ -19,16 +19,18 @@ int main() {
     inFile >> least >> trash >> most >> check >> trash >> password;
     
     while (!inFile.eof()) {
-        int count = 0;
-        int passwordSize = password.size();
+        // part 1
+        //int count = 0;
+        //int passwordSize = password.size();
         
-        for (int x = 0; x < passwordSize; x++) {
-            if (password[x] == check) {
-                count++;
-            }
-        }
+//        for (int x = 0; x < passwordSize; x++) {
+//            if (password[x] == check) {
+//                count++;
+//            }
+//        }
         
-        if (count >= least && count <= most) {
+        //part 2
+        if (check == password[least-1] ^ check == password[most-1]) {
             valid++;
         }
         
